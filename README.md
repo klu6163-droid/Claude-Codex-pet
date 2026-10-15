@@ -1,6 +1,6 @@
 # Claude-Codex pet
 
-一个橘发、花饰、黑白橙裙装的傲娇大小姐 Codex 桌面宠物。嘴硬心软，会侧目看你、鼓嘴不服气，也会认真陪你工作。
+一个橘发、花饰、黑白橙裙装的 Codex 桌面宠物。
 
 **[下载宠物安装包](https://github.com/klu6163-droid/Claude-Codex-pet/releases/latest)**
 
