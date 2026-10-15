@@ -153,3 +153,52 @@ Direction is in VIEWER/SCREEN coordinates. Exact pose sequence:
 Eyes, brows and eyelids participate, then the head/neck turn and pitch naturally. The face and nose must visibly turn toward screen-right for rightward poses and screen-left for leftward poses, showing the appropriate cheek and far-eye occlusion. For straight up/down use clear chin pitch and eyes aimed above/below; neither may look at camera. Preserve original amber eye construction, mildly unimpressed persona and facial proportions. No detached/sliding pupils, replacement eye layer or whole-body rotation. Adjacent poses must progress smoothly, not repeat a single expression or jump sides. Long hair/flower follows head gently; lower body stays stable.
 
 Actual transparent background, clean antialiased warm edges, sharp cel-shaded anime linework. No floor, shadow, haze, bright rim, particles, symbols, text, checkerboard or panel lines. This is a continuous gaze loop, not separate character redesigns. Use the approved four-cardinal strip to interpolate the direction families; match exact body scale. This second half continues one small step after the final pose of the first half and finishes one small step before its first UP pose.
+
+
+## v1.1.1 Review motion repair
+
+# Review animation: three peek poses plus blink and smile
+
+Selected source: generated/review-six-poses.png (boundary-corrected second generation). Original candidate 01 was rejected because adjacent characters were connected and the rightmost lower character touched the canvas edge. Selected source is 1254x1254 RGBA and has six separated major components; minimum outer clear margin is 56px. All figures are complete. Frame 4 eyelids are nearly closed rather than exactly half closed, while frame 5 is fully closed and frame 6 open with a slight smile. Final normalized frames passed independent visual review and atlas validation; the user approved the three-pose peek followed by blinking and a slight smile.
+
+## Boundary repair prompt
+
+Use case: identity-preserve.
+Edit the supplied six-pose transparent sprite sheet. Its exact six poses and expressions are CORRECT. Preserve them exactly. This edit is solely to fix clipping and connected neighboring hair by SHRINKING every entire character uniformly to 70 percent of its current size and separating them with large transparent space.
+
+Use a square transparent canvas. Arrange the SAME six characters in a 3-column by 2-row layout but make the figures substantially smaller. Each figure including hair must occupy NO MORE THAN 65 percent of its column width and 70 percent of its row height, centered in the cell. This means much more empty transparent space than now. Do not enlarge the heads separately; shrink entire figures uniformly. There must be fully clear transparent gaps wider than a boot between ALL neighboring hair silhouettes. There must be generous empty margin on all four outside borders. None of the figures can touch the canvas edge or another figure. Restore any hair tips that were clipped at the extreme right edge while matching the same hairstyle. All six figures need complete hair and complete boots.
+
+Absolutely preserve the intended sequence:
+Top-left shallow forward lean 40 percent, eyes open.
+Top-middle deeper clearly visible forward/screen-left peek 100 percent, eyes open.
+Top-right same shallow forward lean as top-left, eyes open.
+Bottom-left upright stationary body, HALF-CLOSED eyes starting a blink.
+Bottom-middle EXACT SAME upright body/head/hair position as bottom-left, fully naturally CLOSED eyes.
+Bottom-right EXACT SAME upright body/head/hair position, eyes OPEN and a subtle satisfied CLOSED-MOUTH smile.
+Do not alter the peak leaning amplitude relative to character height. Keep arms folded, feet and pelvis locked, identical proportions and character scale throughout. Maintain the detailed orange curled hair, floral accessories, black/white/orange dress and white boots exactly. No new poses or facial changes.
+
+Transparent RGBA only, no background, grid, rectangle, text, labels, particles, shadows or checkerboard. Crisp illustration detail and smooth clean alpha boundaries. The output should look noticeably more spacious and less crowded than the input.
+
+## Initial prompt
+
+Mode: built-in image_gen; transparent_background: true.
+
+Use case: identity-preserve.
+Asset type: complete coherent six-frame animation sprite sheet for the SAME orange-haired Codex pet.
+Image 1 is the current six-pose sheet with clear forward leaning. Use its high-quality character artwork and its visibly leaning pose, but CHANGE THE ANIMATION DESIGN as below. Image 2 is the canonical identity reference.
+This must be exactly SIX full-body drawings, arranged THREE columns by TWO rows, sequence read top-left -> top-middle -> top-right -> bottom-left -> bottom-middle -> bottom-right.
+The TOP ROW is a three-frame peek motion. The BOTTOM ROW is one stationary upright pose with three different blink/expression states. Do not put more leaning poses on the bottom row.
+
+Character invariants: same orange long curled hair, amber eyes, flower and black ribbon on the same side, same mildly tsundere young-lady expression, cream/black/orange layered floral lace dress, folded arms, white lace-up boots. Identical head size, body size, outfit and linework quality throughout. Arms folded in every frame. Both boots and pelvis LOCKED to the same local coordinates, no steps, no bouncing, no scale/camera changes. Hair follows the top-row lean subtly; on the bottom row hair and body are completely stationary.
+
+Exact frame specification:
+F1 TOP LEFT: shallow forward/screen-left peek, only about 40 percent of the peak lean. Amber eyes OPEN, inspecting and slightly skeptical. Use a clear intermediate pose, not fully upright.
+F2 TOP MIDDLE: maximum clearly visible forward/screen-left peek from the waist, keeping feet/pelvis fixed. Preserve the readable leaning amplitude seen in image 1's bottom-left figure, but avoid exaggerating it. Relative to upright head center, about 6 percent of full-body height leftward and 5 percent downward; at 188px full-body height roughly 10–12px left and 8–10px down, head tilt about 8 degrees. Eyes OPEN. This is the ONLY peak pose.
+F3 TOP RIGHT: returns to the SAME shallow 40-percent leaning pose as F1, almost identical body/head placement, eyes OPEN.
+F4 BOTTOM LEFT: returns fully UPRIGHT, same neutral stance as the canonical reference. Eyelids HALF CLOSED, natural beginning of a blink, amber pupils partly covered. Mouth small and relaxed.
+F5 BOTTOM MIDDLE: EXACT SAME upright head angle, head position, torso, hair, arms, dress, legs and boots as F4, only the eyes now fully naturally CLOSED in a gentle blink. Mouth corners soften slightly. No head dip with eye closure.
+F6 BOTTOM RIGHT: EXACT SAME upright body and head pose as F4/F5, eyes OPEN again, ending with a slight satisfied CLOSED-MOUTH smile. Small delicate upward mouth corners, not a grin or open mouth. No added blush or dramatic expression. The last-to-first transition is only a shallow entry into the next peek.
+
+The first three frames should read as shallow lean -> deep visible lean -> shallow lean. The last three MUST be the same stationary upright drawing with half-closed -> fully closed -> open smiling eyes. Prioritize these exact pose and eyelid differences. Do not substitute six continuously moving poses.
+
+Composition/output: real transparent RGBA background, 3 columns by 2 rows, six separated complete full-body figures with generous clear gutters and outer margins. All hair tips and both boots visible, no clipping, overlapping neighbors or connected silhouettes. Identical character scale and foot baseline in every panel. Crisp detailed illustration and clean alpha edges, no green/cyan fringe. No text, labels, numbers, guide lines, grid rectangles, checkerboard, shadows, ground, objects, particles or watermark.

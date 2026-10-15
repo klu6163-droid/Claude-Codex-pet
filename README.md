@@ -6,13 +6,19 @@
 
 ## 动图预览
 
-以下动图均来自 v1.1.0 高清版。
+以下动图均来自 v1.1.1 高清版。
 
 | 抱臂待机 | 傲娇挥手 | 开心小跳 |
 | :---: | :---: | :---: |
 | ![抱臂待机](preview/idle.gif) | ![傲娇挥手](preview/waving.gif) | ![开心小跳](preview/jumping.gif) |
 | **向左小跑** | **向右小跑** | **鼓嘴不服气** |
 | ![向左小跑](preview/running-left.gif) | ![向右小跑](preview/running-right.gif) | ![鼓嘴不服气](preview/failed.gif) |
+
+## v1.1.1 探头动作修复
+
+重新绘制“检查成果”的六帧动作：前三帧稍探、探深、收回，后三帧保持身体稳定，半闭眼、闭眼，再睁眼浅笑。保留明显的探头幅度与连续过渡；播放节奏保持一致，其他十行像素不变。
+
+![检查成果](preview/review.gif)
 
 ## v1.1.0 高清重绘
 
@@ -36,7 +42,7 @@ Codex 安装图保持固定的 1536 × 2288 格式；另提供 [2 倍高清总�
 
 ## 安装
 
-1. 从 Releases 下载 `Claude-Codex-pet-v1.1.0.zip` 并解压。
+1. 从 Releases 下载 `Claude-Codex-pet-v1.1.1.zip` 并解压。
 2. 将 `chengli-tsundere` 文件夹放入 `%USERPROFILE%\.codex\pets\`。
 3. 在 Codex 的宠物列表中选择 **Claude-Codex pet**。如果列表没有刷新，重新打开 Codex。
 
@@ -61,6 +67,6 @@ Codex 安装图保持固定的 1536 × 2288 格式；另提供 [2 倍高清总�
 - Codex sprite version：`2`
 - 动画图：透明 WebP，`1536 × 2288` 像素
 - 布局：`8 × 11`，每格 `192 × 208` 像素
-- 最终动画图 SHA-256：`3e03f7d98cf2ff25c06733b2fc15bb5c92db6bfe540d4049460f7ef537c32849`
+- 最终动画图 SHA-256：`6ce63590d97b2e8328620bd72a5bc63ad6ddaa601e67eac6e07d142e943e2399`
 
 角色外形参考由项目创建者提供，素材由 AI 图像工具生成，并经过动作筛选、边缘修复与排版验证。人设台词是创作说明；静态宠物包本身不会改变 Codex 助手人格，也不提供自动语音或对话。
