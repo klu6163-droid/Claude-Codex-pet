@@ -202,3 +202,35 @@ F6 BOTTOM RIGHT: EXACT SAME upright body and head pose as F4/F5, eyes OPEN again
 The first three frames should read as shallow lean -> deep visible lean -> shallow lean. The last three MUST be the same stationary upright drawing with half-closed -> fully closed -> open smiling eyes. Prioritize these exact pose and eyelid differences. Do not substitute six continuously moving poses.
 
 Composition/output: real transparent RGBA background, 3 columns by 2 rows, six separated complete full-body figures with generous clear gutters and outer margins. All hair tips and both boots visible, no clipping, overlapping neighbors or connected silhouettes. Identical character scale and foot baseline in every panel. Crisp detailed illustration and clean alpha edges, no green/cyan fringe. No text, labels, numbers, guide lines, grid rectangles, checkerboard, shadows, ground, objects, particles or watermark.
+
+
+## v1.1.2 Jumping expression update
+
+# Jumping smile edit, candidate 3
+
+Mode: built-in ImageGen edit; transparent_background=true.
+
+Latest user correction: first frame must be closed-mouth; smile should develop with the jump. This overrides the earlier request for all five mouths open. Candidate 2 and its prompt are preserved as jumping-five-poses-v2.png and generation-prompt-v2.md. Candidate 3 starts from the original approved pose target, with identity reference only.
+
+Use case: precise-object-edit, identity-preserve.
+Asset: five consecutive frames of a tiny hop animation for an existing anime chibi desktop pet.
+Latest user instruction supersedes previous open-mouth instructions: "第一帧不要张嘴，我想要边跳边笑的效果" — first frame must have a CLOSED mouth; she should grow into a smile as she jumps. Her expression must evolve with the jump, not be identical across all frames.
+
+INPUT 1 is the EXACT approved five-pose jump EDIT TARGET. Copy its pose geometry, frame order, body/head angles, outfit and detailed hair exactly. INPUT 2 is identity/detail reference only, not its crossed-arm standing pose. Edit only expressions in the first reference.
+Required mouth choreography in row-major order:
+1 TOP LEFT / crouch preparation: lips fully CLOSED, a tiny soft upward smiling curve, no visible mouth interior. Relaxed, reserved anticipation.
+2 TOP CENTER / takeoff: mouth begins to OPEN in a small gentle smile; corners lift and a modest pink interior becomes visible.
+3 TOP RIGHT / apex with knees lifted: the happiest moment; clearly OPEN small rounded smile, slightly wider and deeper than frames 2 and 4, joyful but restrained. Not a big laugh, no teeth or tongue.
+4 BOTTOM LEFT / descent: maintain a natural soft OPEN smile, visibly less open than the apex, expression relaxing.
+5 BOTTOM CENTER / landing: smile settles back to a CLOSED-mouth gentle smile, almost like frame 1, so the animation can loop naturally.
+These five expressions must be visibly differentiated. Mouth-opening progression = CLOSED / SMALL OPEN / MOST OPEN / SMALLER OPEN / CLOSED.
+Do not accidentally give frame 1 an open mouth. Do not duplicate the same open mouth in all five frames.
+
+Keep normal face shape and facial proportions, amber eyes OPEN in every frame, same gaze and head angle as original, natural relaxed brows with the existing character's lightly tsundere eye shape. No odd squeezed face, crooked smirk, cat/W mouth, shocked O mouth, broad laughter or exaggerated blush. Open smiles are clean shallow shapes with a soft dark pink interior, small but readable at 192x208 sprite display size.
+
+Preserve these original five action poses: first preparation crouch with hands near waist; second arms outward and legs extended downward during upward motion; third knees raised during apex; fourth descending with arms outward; fifth landing crouch. Do not change arm/leg/hand placement, hair flow/silhouette, head size, body angle, foot elevation, orange long hair, flower and black bow side, cream/black/orange floral layered dress or white boots. Do not invent additional poses or pin all boots onto one baseline.
+EXACTLY FIVE complete isolated figures: 3 top + 2 bottom left/center, bottom-right EMPTY transparent. Large safe gaps between figures and clear outer margins on all sides. All hair curls, ribbons, hems and boots fully inside canvas; no clipping or overlap.
+Preserve original refined detailed anime chibi rendering, crisp lines and warm palette. Genuine transparent background. No ground, shadows, extra effects, labels, text, guides, borders or checkerboard.
+
+
+Final encoded frames passed structural validation and independent visual review. The user approved the closed-mouth first frame, smile opening with takeoff, and soft landing expression.
